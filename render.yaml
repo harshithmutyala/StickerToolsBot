@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: sticker
+    plan: free
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: API_ID
+        description: "Telegram"
+        sync: false
+      - key: API_HASH
+        description: "Bot"
+        sync: false
+      - key: BOT_TOKEN
+        description: "Your Force subscribe channel Username Without @"
+        sync: false  
